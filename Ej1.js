@@ -13,13 +13,22 @@ class Coche extends Vehiculo {
     super(marca, modelo, año);
     this.numeroPuertas = numeroPuertas;
   }
+  obtenerDetalles() {
+    return `${super.obtenerDetalles()}, Número de puertas: ${
+      this.numeroPuertas
+    }`;
+  }
 }
 class Moto extends Vehiculo {
   constructor(marca, modelo, año, cilindrada) {
     super(marca, modelo, año);
     this.cilindrada = cilindrada;
   }
+  obtenerDetalles() {
+    return `${super.obtenerDetalles()}, Cilindrada : ${this.cilindrada}`;
+  }
 }
+
 const vehiculo1 = new Coche("Toyota", "Corolla", 2020, 4);
 const vehiculo2 = new Moto("Yamaha", "MT-07", 2021, 689);
 console.log(vehiculo1.obtenerDetalles());
